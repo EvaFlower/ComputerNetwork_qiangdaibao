@@ -1,0 +1,23 @@
+﻿{
+  "manifest_version": 2,
+
+  "name": "抢贷",
+  "description": "这是一个陆金所的抢贷插件",
+  "version": "1.0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "https://www.lu.com/*","https://list.lu.com/list/*","https://user.lu.com/user/*"
+  ],
+  "content_scripts": [
+    {
+      "matches":["https://www.lu.com/*","https://list.lu.com/list/*","https://user.lu.com/user/*"],
+      "js": ["lu_qiang.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
+//
